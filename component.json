@@ -1,0 +1,14 @@
+{
+    "name" : "jquery-gholiday",
+    "version" : "0.0.1",
+    "main" : "./jquery.gholiday.js",
+    "dependencies" : {
+        "jquery" : ">=1.5"
+    },
+    "readmeFilename" : "README.md",
+    "description" : "",
+    "repository" : {
+        "type" : "git",
+        "url"  : "git://github.com/chris4403/gholiday.git"
+    }
+}

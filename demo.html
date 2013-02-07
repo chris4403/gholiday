@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="./jquery.gholiday.js"></script>
+    <script>
+        $(function() {
+            $('#getCalendar').click(function() {
+                $.getGHoliday({
+                    country : "ja",
+                    callback : function(holidays) {
+                    for (var i = 0 , len = holidays.length; i < len ; i++) {
+                            var holiday = holidays[i];
+                            $('#result').val($('#result').val() + holiday.date + ":" + holiday.title + "\n");
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+  </head>
+  <body>
+  <input type="button" value="get" id="getCalendar">
+  <br><textarea id="result" cols="50" rows="30"></textarea>
+  </body>
+</html>
